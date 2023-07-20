@@ -1,0 +1,140 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app > #controls {
+  height: 100%;
+
+  box-shadow: 0 0 5px rgba(0, 0, 0);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  padding: 0 30px;
+}
+.app > #controls #searchbar {
+  flex-shrink: 0;
+
+  border-radius: 5px;
+  border: none;
+
+  padding: 8px 4px;
+  user-select: none;
+}
+.app > #controls .searchbar-label {
+  display: flex;
+  flex-direction: column;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+}
+.app > #controls > #selectbox {
+  flex-shrink: 0;
+
+  width: max-content;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+.app > #controls > .controls-radio {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.app > #controls > .controls-radio input {
+  margin-right: 5px;
+}
+.selectbox {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+.selectbox > ul {
+  display: flex;
+  flex-direction: column;
+}
+.selectbox > ul > li {
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+}
+.selectbox > ul > li > label {
+  flex: 1;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+.selectbox > ul > li > label:hover {
+  font-weight: bold;
+}
+
+.idnamelist, .results-container {
+  flex: 1;
+
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 20px;
+
+  overflow-y: auto;
+}
+.idnamelist > li {
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0);
+
+  cursor: default;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px;
+
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.idnamelist > li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+.results-container > p {
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+  padding: 5px 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+  .app > #controls {
+    width: 100%;
+    height: auto;
+    gap: 5px;
+  }
+  .app > #controls .searchbar-label {
+    width: 100%;
+    align-items: center;
+  }
+  .app > #controls #searchbar {
+    width: 100%;
+  }
+  .app > #controls > #selectbox {
+    padding-bottom: 10px;
+  }
+}
